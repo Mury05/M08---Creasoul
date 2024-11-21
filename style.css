@@ -1,0 +1,149 @@
+*{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Open Sans;
+    src: url("./assets/font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
+}
+
+@font-face {
+    font-family: PT Sans Narrow;
+    src: url("./assets/font/PT_Sans_Narrow/PTSansNarrow-Regular.ttf");
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: hsl(260deg 12% 95.1%);
+    width: 100%;
+}
+.container{
+    padding-left: 2%;
+    padding-right: 5%;
+}
+.entete{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+ul{
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(170deg 55.56% 42.35%);
+}
+li{
+    width: 100%;
+    text-align: center;
+    padding-block: 25px;
+}
+a{
+    color: white;
+    font-family: PT Sans Narrow;
+    font-size:  1.6rem;
+    text-decoration: none;
+}
+h1, h2{
+    color: hsl(169.91deg 48.5% 45.69%);
+    font-family: PT Sans Narrow;
+    text-transform: uppercase;
+    font-weight: 100;
+    border-bottom: 1px solid hsl(169.91deg 48.5% 45.69%);;
+}
+h1{
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+h2{
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+
+}
+p{
+    font-family: Open Sans;
+    line-height: 2rem;
+    color: hsl(220deg 2.4% 50.98%);
+}
+.picture{
+    width: 100%;
+}
+aside{
+    display: none;
+}
+.colored{
+    color: hsl(169.91deg 48.5% 45.69%);
+
+}
+footer{
+    font-size: 15px;
+    text-align: center;
+}
+footer div{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+.ww{
+    width: 30%;
+}
+footer p{
+    margin-inline: 10px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    line-height: 25px;
+
+}
+.second{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 600px) {
+
+    h1, h2, p{
+        padding-inline: 1%;
+    }
+    aside{
+        display: block;
+        background-color: rgb(184 220 177);
+        padding-block: 1%;
+    }
+}
+
+@media screen and (min-width: 1200px)  {
+    body{
+        width: 80%;
+        margin: auto;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-template-rows: 309px 1fr 300PX;
+        grid-template-areas: 'header header'
+        'main aside'
+        'footer footer';
+    }
+    header{
+        grid-area: header;
+    }
+    main{
+        grid-area: main;
+    }
+    footer{
+        grid-area: footer;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+    }
+    aside{
+        margin-left: 15px;
+        padding-inline: 10px;
+    }
+    /* .mobile{
+        display: none;
+    } */
+}
